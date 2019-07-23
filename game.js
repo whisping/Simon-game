@@ -13,6 +13,14 @@ $(document).keypress(function(){
     }
 });
 
+$(document).click(function(){
+    if (start === false) {
+        start = true;
+        $("#level-title").text("Level " + level);
+        nextSequence();
+    }
+});
+
 function nextSequence() {
     var randomNumber = Math.floor(Math.random() * 4);
     var randomChosenColour = buttonColours[randomNumber];
